@@ -12,6 +12,7 @@ ${CONTA_PAR}
 
 # Exiba cada uma das frutas de uma lista usando um For Simples
 
+${LISTA_CONFERE_COMPARA}
 
 *** Test Cases ***
 Cenario de teste 01 - Dicionário
@@ -31,14 +32,14 @@ Cenario de teste 04 - If Inline + For in Range
      Exibir numeros pares em uma lista determinada
 
 
-
 *** Keywords ***
-_________________________________________________________________________________________
+
 #                                    Exercicio Dicionario                               #
 Exibir pessoa no Console
-    Log To Console     nome=Jose da Silva    idade=67    endereco=rua Santa Luzia    numero=118    cep=36404-000    bairro=Belo Horizonte    cidade=Congonhas    estado=Minas Gerais
+    Log To Console     nome=Jose da Silva    idade=67    endereco=rua Santa Luzia    numero=118    cep=36404-000
+    ...                bairro=Belo Horizonte    cidade=Congonhas    estado=Minas Gerais
 
-_________________________________________________________________________________________
+
 #                               Exercicio - If simples                                  #
 Exibir Ano de nascimento
     [Arguments]    ${IDADE}
@@ -46,14 +47,14 @@ Exibir Ano de nascimento
     ${ANO_NASCIMENTO} =    Evaluate     ${ANO_ATUAL} - ${IDADE}             
     
     IF    ${ANO_NASCIMENTO} < 2000
-        Log to console    Voce nasceu no seculo passado
+        Log to console    Voce nasceu no seculo passado, mas nao sou tao velho assim, um pouco mais exepriente :))!!!
     
     ELSE IF     ${ANO_NASCIMENTO} >= 2000
-        Log to console    Voce nasceu neste seculo    
+        Log to console    Voce nasceu neste seculo a vida eh bela!!   
     
     END
 
-__________________________________________________________________________________________
+
 #                              Exercicio - For Simples + Lista                           #
 Exibir lista escolha de fruta
     @{ESCOLHA_FRUTA}    Create List    Maça    Pera    Banana    melao    Uva
@@ -61,14 +62,19 @@ Exibir lista escolha de fruta
         Log to console    ${ESCOLHA_FRUTA}
     END
 
-_________________________________________________________________________________________
+
 #                        Exercicio - If Inline + For in Range                           #
 
 Exibir numeros pares em uma lista determinada
     FOR    ${i}    IN RANGE    0    11
-        IF  ${i%2} == 0
-        ${CONTA_PAR}    Evaluate    ${CONTA_PAR} + 1
-            Log to console    \n\nOs numeros pares sao: ${i} e existem ${CONTA_PAR} numeros pares de 0 a 10
+        IF  ${i%2} == 0        
+        ${CONTA_PAR}    Evaluate    ${CONTA_PAR} +1
+            Log to console    \n\nO total de numeros: ${i} e existem ${CONTA_PAR} numeros pares
         END
         Log To Console    Acabou o loop!
     END
+
+
+    
+
+
