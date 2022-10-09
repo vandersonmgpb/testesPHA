@@ -36,7 +36,7 @@ Cenario de teste 04 - If Inline + For in Range
 
 #                                    Exercicio Dicionario                               #
 Exibir pessoa no Console
-    Log     Nome: ${PESSOA.nome}    idade: ${PESSOA.idade}    endereco: ${PESSOA.endereco}    numero: ${PESSOA.numero}    cep: ${PESSOA.cep}     bairro: ${PESSOA.bairro}    cidade: ${PESSOA.cidade}    estado: ${PESSOA.estado}
+    Log Many     Nome: ${PESSOA.nome}    idade: ${PESSOA.idade}    endereco: ${PESSOA.endereco}    numero: ${PESSOA.numero}    cep: ${PESSOA.cep}     bairro: ${PESSOA.bairro}    cidade: ${PESSOA.cidade}    estado: ${PESSOA.estado}
 
 
 #                               Exercicio - If simples                                  #
@@ -46,19 +46,19 @@ Exibir Ano de nascimento
     ${ANO_NASCIMENTO} =    Evaluate     ${ANO_ATUAL} - ${IDADE}             
     
     IF    ${ANO_NASCIMENTO} < 2000
-        Log to console    Voce nasceu no seculo passado, mas nao sou tao velho assim, um pouco mais exepriente :))!!!
+        Log    Voce nasceu no seculo passado, mas nao sou tao velho assim, um pouco mais exepriente :))!!!
     
     ELSE IF     ${ANO_NASCIMENTO} >= 2000
-        Log to console    Voce nasceu neste seculo a vida eh bela!!   
+        Log    Voce nasceu neste seculo a vida eh bela!!   
     
     END
 
 
 #                              Exercicio - For Simples + Lista                           #
 Exibir lista escolha de fruta
-    @{ESCOLHA_FRUTA}    Create List    Maça    Pera    Banana    melao    Uva
+    @{ESCOLHA_FRUTA}    Create List    Maca    Pera    Banana    Melao    Uva
     FOR    ${ESCOLHA_FRUTA}    IN    ${ESCOLHA_FRUTA}
-        Log to console    ${ESCOLHA_FRUTA}
+        Log    Minha escolha e: ${ESCOLHA_FRUTA[3]}
     END
 
 
@@ -68,9 +68,9 @@ Exibir numeros pares em uma lista determinada
     FOR    ${i}    IN RANGE    0    11
         IF  ${i%2} == 0        
         ${CONTA_PAR}    Evaluate    ${CONTA_PAR} +1
-            Log to console    \n\nO total de numeros: ${i} e existem ${CONTA_PAR} numeros pares
+            Log    \n\nO total de numeros: ${i} e existem ${CONTA_PAR} numeros pares
         END
-        Log To Console    Acabou o loop!
+        Log    Acabou o loop!
     END
 
 
