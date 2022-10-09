@@ -1,50 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.0 on win32)" generated="20221003 10:29:54.401" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.0 on win32)" generated="20221009 15:42:33.058" rpa="false" schemaversion="3">
 <suite id="s1" name="ExercicioSegSem" source="C:\PHA\Exercicio 2 - FcoAraujo\testesPHA\test\features\ExercicioSegSem.robot">
-<test id="s1-t1" name="Cenario de teste 01 - Dicionário" line="19">
-<kw name="Log To Console" library="BuiltIn">
+<test id="s1-t1" name="Cenario de teste 01 - Dicionário" line="18">
+<kw name="Log" library="BuiltIn">
 <arg>${PESSOA}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.420" endtime="20221003 10:29:54.421"/>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221009 15:42:33.079" level="INFO">{'nome': 'Jose da Silva', '\nidade': '67', 'endereco': 'rua Santa Luzia', 'numero': '118', 'cep': '36404-000', 'bairro': 'Belo Horizonte', 'cidade': 'Congonhas', 'estado': 'Minas Gerais'}</msg>
+<status status="PASS" starttime="20221009 15:42:33.079" endtime="20221009 15:42:33.079"/>
 </kw>
 <tag>PESSOA</tag>
-<status status="PASS" starttime="20221003 10:29:54.416" endtime="20221003 10:29:54.421"/>
+<status status="PASS" starttime="20221009 15:42:33.079" endtime="20221009 15:42:33.080"/>
 </test>
-<test id="s1-t2" name="Cenario de teste 02 - Argumentos e Retornos + If Simples" line="23">
+<test id="s1-t2" name="Cenario de teste 02 - Argumentos e Retornos + If Simples" line="22">
 <kw name="Exibir Ano de nascimento">
 <arg>67</arg>
 <kw name="Evaluate" library="BuiltIn">
 <var>${ANO_NASCIMENTO}</var>
 <arg>${ANO_ATUAL} - ${IDADE}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221003 10:29:54.423" level="INFO">${ANO_NASCIMENTO} = 1955</msg>
-<status status="PASS" starttime="20221003 10:29:54.423" endtime="20221003 10:29:54.423"/>
+<msg timestamp="20221009 15:42:33.082" level="INFO">${ANO_NASCIMENTO} = 1955</msg>
+<status status="PASS" starttime="20221009 15:42:33.082" endtime="20221009 15:42:33.082"/>
 </kw>
 <if>
 <branch type="IF" condition="${ANO_NASCIMENTO} &lt; 2000">
 <kw name="Log To Console" library="BuiltIn">
 <arg>Voce nasceu no seculo passado, mas nao sou tao velho assim, um pouco mais exepriente :))!!!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.424" endtime="20221003 10:29:54.424"/>
+<status status="PASS" starttime="20221009 15:42:33.082" endtime="20221009 15:42:33.083"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.423" endtime="20221003 10:29:54.424"/>
+<status status="PASS" starttime="20221009 15:42:33.082" endtime="20221009 15:42:33.083"/>
 </branch>
 <branch type="ELSE IF" condition="${ANO_NASCIMENTO} &gt;= 2000">
 <kw name="Log To Console" library="BuiltIn">
-<arg>Voce nasceu neste seculo a vida eh bela</arg>
+<arg>Voce nasceu neste seculo a vida eh bela!!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20221003 10:29:54.424" endtime="20221003 10:29:54.424"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.083" endtime="20221009 15:42:33.083"/>
 </kw>
-<status status="NOT RUN" starttime="20221003 10:29:54.424" endtime="20221003 10:29:54.425"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.083" endtime="20221009 15:42:33.083"/>
 </branch>
-<status status="PASS" starttime="20221003 10:29:54.423" endtime="20221003 10:29:54.425"/>
+<status status="PASS" starttime="20221009 15:42:33.082" endtime="20221009 15:42:33.083"/>
 </if>
-<status status="PASS" starttime="20221003 10:29:54.423" endtime="20221003 10:29:54.425"/>
+<status status="PASS" starttime="20221009 15:42:33.081" endtime="20221009 15:42:33.083"/>
 </kw>
 <tag>SECULO PASSADO</tag>
-<status status="PASS" starttime="20221003 10:29:54.422" endtime="20221003 10:29:54.425"/>
+<status status="PASS" starttime="20221009 15:42:33.081" endtime="20221009 15:42:33.083"/>
 </test>
-<test id="s1-t3" name="Cenario de teste 03 - For Simples + Lista" line="27">
+<test id="s1-t3" name="Cenario de teste 03 - For Simples + Lista" line="26">
 <kw name="Exibir lista escolha de fruta">
 <kw name="Create List" library="BuiltIn">
 <var>@{ESCOLHA_FRUTA}</var>
@@ -54,8 +55,8 @@
 <arg>melao</arg>
 <arg>Uva</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20221003 10:29:54.427" level="INFO">@{ESCOLHA_FRUTA} = [ Maça | Pera | Banana | melao | Uva ]</msg>
-<status status="PASS" starttime="20221003 10:29:54.427" endtime="20221003 10:29:54.427"/>
+<msg timestamp="20221009 15:42:33.086" level="INFO">@{ESCOLHA_FRUTA} = [ Maça | Pera | Banana | melao | Uva ]</msg>
+<status status="PASS" starttime="20221009 15:42:33.086" endtime="20221009 15:42:33.086"/>
 </kw>
 <for flavor="IN">
 <var>${ESCOLHA_FRUTA}</var>
@@ -65,18 +66,18 @@
 <kw name="Log To Console" library="BuiltIn">
 <arg>${ESCOLHA_FRUTA}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.428" endtime="20221003 10:29:54.428"/>
+<status status="PASS" starttime="20221009 15:42:33.086" endtime="20221009 15:42:33.087"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.428" endtime="20221003 10:29:54.428"/>
+<status status="PASS" starttime="20221009 15:42:33.086" endtime="20221009 15:42:33.087"/>
 </iter>
-<status status="PASS" starttime="20221003 10:29:54.427" endtime="20221003 10:29:54.428"/>
+<status status="PASS" starttime="20221009 15:42:33.086" endtime="20221009 15:42:33.087"/>
 </for>
-<status status="PASS" starttime="20221003 10:29:54.427" endtime="20221003 10:29:54.428"/>
+<status status="PASS" starttime="20221009 15:42:33.085" endtime="20221009 15:42:33.087"/>
 </kw>
 <tag>ESCOLHA_FRUTA</tag>
-<status status="PASS" starttime="20221003 10:29:54.426" endtime="20221003 10:29:54.429"/>
+<status status="PASS" starttime="20221009 15:42:33.084" endtime="20221009 15:42:33.087"/>
 </test>
-<test id="s1-t4" name="Cenario de teste 04 - If Inline + For in Range" line="31">
+<test id="s1-t4" name="Cenario de teste 04 - If Inline + For in Range" line="30">
 <kw name="Exibir numeros pares em uma lista determinada">
 <for flavor="IN RANGE">
 <var>${i}</var>
@@ -90,24 +91,24 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221003 10:29:54.434" level="INFO">${CONTA_PAR} = 1</msg>
-<status status="PASS" starttime="20221003 10:29:54.434" endtime="20221003 10:29:54.435"/>
+<msg timestamp="20221009 15:42:33.089" level="INFO">${CONTA_PAR} = 1</msg>
+<status status="PASS" starttime="20221009 15:42:33.089" endtime="20221009 15:42:33.089"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n\nO total de numeros: ${i} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.435" endtime="20221003 10:29:54.435"/>
+<status status="PASS" starttime="20221009 15:42:33.089" endtime="20221009 15:42:33.090"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.434" endtime="20221003 10:29:54.435"/>
+<status status="PASS" starttime="20221009 15:42:33.089" endtime="20221009 15:42:33.090"/>
 </branch>
-<status status="PASS" starttime="20221003 10:29:54.433" endtime="20221003 10:29:54.436"/>
+<status status="PASS" starttime="20221009 15:42:33.089" endtime="20221009 15:42:33.090"/>
 </if>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Acabou o loop!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.436" endtime="20221003 10:29:54.436"/>
+<status status="PASS" starttime="20221009 15:42:33.090" endtime="20221009 15:42:33.090"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.433" endtime="20221003 10:29:54.436"/>
+<status status="PASS" starttime="20221009 15:42:33.089" endtime="20221009 15:42:33.090"/>
 </iter>
 <iter>
 <var name="${i}">1</var>
@@ -117,23 +118,23 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20221003 10:29:54.437" endtime="20221003 10:29:54.437"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.091" endtime="20221009 15:42:33.091"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n\nO total de numeros: ${i} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20221003 10:29:54.437" endtime="20221003 10:29:54.437"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.091" endtime="20221009 15:42:33.091"/>
 </kw>
-<status status="NOT RUN" starttime="20221003 10:29:54.437" endtime="20221003 10:29:54.437"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.091" endtime="20221009 15:42:33.091"/>
 </branch>
-<status status="PASS" starttime="20221003 10:29:54.436" endtime="20221003 10:29:54.437"/>
+<status status="PASS" starttime="20221009 15:42:33.091" endtime="20221009 15:42:33.091"/>
 </if>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Acabou o loop!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.437" endtime="20221003 10:29:54.438"/>
+<status status="PASS" starttime="20221009 15:42:33.091" endtime="20221009 15:42:33.091"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.436" endtime="20221003 10:29:54.438"/>
+<status status="PASS" starttime="20221009 15:42:33.090" endtime="20221009 15:42:33.091"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
@@ -143,24 +144,24 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221003 10:29:54.438" level="INFO">${CONTA_PAR} = 2</msg>
-<status status="PASS" starttime="20221003 10:29:54.438" endtime="20221003 10:29:54.438"/>
+<msg timestamp="20221009 15:42:33.092" level="INFO">${CONTA_PAR} = 2</msg>
+<status status="PASS" starttime="20221009 15:42:33.092" endtime="20221009 15:42:33.092"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n\nO total de numeros: ${i} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.438" endtime="20221003 10:29:54.439"/>
+<status status="PASS" starttime="20221009 15:42:33.092" endtime="20221009 15:42:33.093"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.438" endtime="20221003 10:29:54.439"/>
+<status status="PASS" starttime="20221009 15:42:33.092" endtime="20221009 15:42:33.093"/>
 </branch>
-<status status="PASS" starttime="20221003 10:29:54.438" endtime="20221003 10:29:54.439"/>
+<status status="PASS" starttime="20221009 15:42:33.091" endtime="20221009 15:42:33.093"/>
 </if>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Acabou o loop!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.439" endtime="20221003 10:29:54.440"/>
+<status status="PASS" starttime="20221009 15:42:33.093" endtime="20221009 15:42:33.094"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.438" endtime="20221003 10:29:54.440"/>
+<status status="PASS" starttime="20221009 15:42:33.091" endtime="20221009 15:42:33.094"/>
 </iter>
 <iter>
 <var name="${i}">3</var>
@@ -170,23 +171,23 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20221003 10:29:54.441" endtime="20221003 10:29:54.441"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.094" endtime="20221009 15:42:33.094"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n\nO total de numeros: ${i} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20221003 10:29:54.441" endtime="20221003 10:29:54.441"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.094" endtime="20221009 15:42:33.094"/>
 </kw>
-<status status="NOT RUN" starttime="20221003 10:29:54.441" endtime="20221003 10:29:54.441"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.094" endtime="20221009 15:42:33.094"/>
 </branch>
-<status status="PASS" starttime="20221003 10:29:54.440" endtime="20221003 10:29:54.441"/>
+<status status="PASS" starttime="20221009 15:42:33.094" endtime="20221009 15:42:33.094"/>
 </if>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Acabou o loop!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.441" endtime="20221003 10:29:54.441"/>
+<status status="PASS" starttime="20221009 15:42:33.094" endtime="20221009 15:42:33.095"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.440" endtime="20221003 10:29:54.441"/>
+<status status="PASS" starttime="20221009 15:42:33.094" endtime="20221009 15:42:33.095"/>
 </iter>
 <iter>
 <var name="${i}">4</var>
@@ -196,24 +197,24 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221003 10:29:54.442" level="INFO">${CONTA_PAR} = 3</msg>
-<status status="PASS" starttime="20221003 10:29:54.442" endtime="20221003 10:29:54.442"/>
+<msg timestamp="20221009 15:42:33.096" level="INFO">${CONTA_PAR} = 3</msg>
+<status status="PASS" starttime="20221009 15:42:33.096" endtime="20221009 15:42:33.096"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n\nO total de numeros: ${i} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.442" endtime="20221003 10:29:54.443"/>
+<status status="PASS" starttime="20221009 15:42:33.096" endtime="20221009 15:42:33.097"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.442" endtime="20221003 10:29:54.443"/>
+<status status="PASS" starttime="20221009 15:42:33.096" endtime="20221009 15:42:33.097"/>
 </branch>
-<status status="PASS" starttime="20221003 10:29:54.442" endtime="20221003 10:29:54.443"/>
+<status status="PASS" starttime="20221009 15:42:33.095" endtime="20221009 15:42:33.097"/>
 </if>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Acabou o loop!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.443" endtime="20221003 10:29:54.444"/>
+<status status="PASS" starttime="20221009 15:42:33.097" endtime="20221009 15:42:33.098"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.441" endtime="20221003 10:29:54.444"/>
+<status status="PASS" starttime="20221009 15:42:33.095" endtime="20221009 15:42:33.098"/>
 </iter>
 <iter>
 <var name="${i}">5</var>
@@ -223,23 +224,23 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20221003 10:29:54.445" endtime="20221003 10:29:54.445"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.099" endtime="20221009 15:42:33.099"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n\nO total de numeros: ${i} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20221003 10:29:54.445" endtime="20221003 10:29:54.445"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.099" endtime="20221009 15:42:33.099"/>
 </kw>
-<status status="NOT RUN" starttime="20221003 10:29:54.445" endtime="20221003 10:29:54.445"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.098" endtime="20221009 15:42:33.099"/>
 </branch>
-<status status="PASS" starttime="20221003 10:29:54.444" endtime="20221003 10:29:54.445"/>
+<status status="PASS" starttime="20221009 15:42:33.098" endtime="20221009 15:42:33.099"/>
 </if>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Acabou o loop!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.445" endtime="20221003 10:29:54.445"/>
+<status status="PASS" starttime="20221009 15:42:33.099" endtime="20221009 15:42:33.099"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.444" endtime="20221003 10:29:54.445"/>
+<status status="PASS" starttime="20221009 15:42:33.098" endtime="20221009 15:42:33.099"/>
 </iter>
 <iter>
 <var name="${i}">6</var>
@@ -249,24 +250,24 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221003 10:29:54.446" level="INFO">${CONTA_PAR} = 4</msg>
-<status status="PASS" starttime="20221003 10:29:54.446" endtime="20221003 10:29:54.446"/>
+<msg timestamp="20221009 15:42:33.100" level="INFO">${CONTA_PAR} = 4</msg>
+<status status="PASS" starttime="20221009 15:42:33.100" endtime="20221009 15:42:33.100"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n\nO total de numeros: ${i} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.447" endtime="20221003 10:29:54.448"/>
+<status status="PASS" starttime="20221009 15:42:33.100" endtime="20221009 15:42:33.101"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.446" endtime="20221003 10:29:54.448"/>
+<status status="PASS" starttime="20221009 15:42:33.100" endtime="20221009 15:42:33.101"/>
 </branch>
-<status status="PASS" starttime="20221003 10:29:54.445" endtime="20221003 10:29:54.448"/>
+<status status="PASS" starttime="20221009 15:42:33.099" endtime="20221009 15:42:33.101"/>
 </if>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Acabou o loop!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.449" endtime="20221003 10:29:54.449"/>
+<status status="PASS" starttime="20221009 15:42:33.101" endtime="20221009 15:42:33.102"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.445" endtime="20221003 10:29:54.449"/>
+<status status="PASS" starttime="20221009 15:42:33.099" endtime="20221009 15:42:33.102"/>
 </iter>
 <iter>
 <var name="${i}">7</var>
@@ -276,23 +277,23 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20221003 10:29:54.450" endtime="20221003 10:29:54.450"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.102" endtime="20221009 15:42:33.102"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n\nO total de numeros: ${i} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20221003 10:29:54.450" endtime="20221003 10:29:54.450"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.102" endtime="20221009 15:42:33.102"/>
 </kw>
-<status status="NOT RUN" starttime="20221003 10:29:54.450" endtime="20221003 10:29:54.450"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.102" endtime="20221009 15:42:33.102"/>
 </branch>
-<status status="PASS" starttime="20221003 10:29:54.449" endtime="20221003 10:29:54.450"/>
+<status status="PASS" starttime="20221009 15:42:33.102" endtime="20221009 15:42:33.102"/>
 </if>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Acabou o loop!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.450" endtime="20221003 10:29:54.451"/>
+<status status="PASS" starttime="20221009 15:42:33.102" endtime="20221009 15:42:33.103"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.449" endtime="20221003 10:29:54.451"/>
+<status status="PASS" starttime="20221009 15:42:33.102" endtime="20221009 15:42:33.103"/>
 </iter>
 <iter>
 <var name="${i}">8</var>
@@ -302,24 +303,24 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221003 10:29:54.453" level="INFO">${CONTA_PAR} = 5</msg>
-<status status="PASS" starttime="20221003 10:29:54.452" endtime="20221003 10:29:54.453"/>
+<msg timestamp="20221009 15:42:33.104" level="INFO">${CONTA_PAR} = 5</msg>
+<status status="PASS" starttime="20221009 15:42:33.104" endtime="20221009 15:42:33.104"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n\nO total de numeros: ${i} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.453" endtime="20221003 10:29:54.454"/>
+<status status="PASS" starttime="20221009 15:42:33.104" endtime="20221009 15:42:33.104"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.452" endtime="20221003 10:29:54.454"/>
+<status status="PASS" starttime="20221009 15:42:33.104" endtime="20221009 15:42:33.104"/>
 </branch>
-<status status="PASS" starttime="20221003 10:29:54.451" endtime="20221003 10:29:54.454"/>
+<status status="PASS" starttime="20221009 15:42:33.103" endtime="20221009 15:42:33.104"/>
 </if>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Acabou o loop!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.454" endtime="20221003 10:29:54.454"/>
+<status status="PASS" starttime="20221009 15:42:33.105" endtime="20221009 15:42:33.106"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.451" endtime="20221003 10:29:54.454"/>
+<status status="PASS" starttime="20221009 15:42:33.103" endtime="20221009 15:42:33.106"/>
 </iter>
 <iter>
 <var name="${i}">9</var>
@@ -329,23 +330,23 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20221003 10:29:54.455" endtime="20221003 10:29:54.455"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.106" endtime="20221009 15:42:33.106"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n\nO total de numeros: ${i} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20221003 10:29:54.455" endtime="20221003 10:29:54.455"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.106" endtime="20221009 15:42:33.106"/>
 </kw>
-<status status="NOT RUN" starttime="20221003 10:29:54.455" endtime="20221003 10:29:54.455"/>
+<status status="NOT RUN" starttime="20221009 15:42:33.106" endtime="20221009 15:42:33.106"/>
 </branch>
-<status status="PASS" starttime="20221003 10:29:54.455" endtime="20221003 10:29:54.455"/>
+<status status="PASS" starttime="20221009 15:42:33.106" endtime="20221009 15:42:33.106"/>
 </if>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Acabou o loop!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.455" endtime="20221003 10:29:54.456"/>
+<status status="PASS" starttime="20221009 15:42:33.106" endtime="20221009 15:42:33.106"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.455" endtime="20221003 10:29:54.456"/>
+<status status="PASS" starttime="20221009 15:42:33.106" endtime="20221009 15:42:33.106"/>
 </iter>
 <iter>
 <var name="${i}">10</var>
@@ -355,56 +356,47 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221003 10:29:54.458" level="INFO">${CONTA_PAR} = 6</msg>
-<status status="PASS" starttime="20221003 10:29:54.458" endtime="20221003 10:29:54.458"/>
+<msg timestamp="20221009 15:42:33.107" level="INFO">${CONTA_PAR} = 6</msg>
+<status status="PASS" starttime="20221009 15:42:33.107" endtime="20221009 15:42:33.107"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>\n\nO total de numeros: ${i} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.458" endtime="20221003 10:29:54.479"/>
+<status status="PASS" starttime="20221009 15:42:33.107" endtime="20221009 15:42:33.108"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.458" endtime="20221003 10:29:54.479"/>
+<status status="PASS" starttime="20221009 15:42:33.107" endtime="20221009 15:42:33.108"/>
 </branch>
-<status status="PASS" starttime="20221003 10:29:54.456" endtime="20221003 10:29:54.479"/>
+<status status="PASS" starttime="20221009 15:42:33.107" endtime="20221009 15:42:33.108"/>
 </if>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Acabou o loop!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221003 10:29:54.479" endtime="20221003 10:29:54.479"/>
+<status status="PASS" starttime="20221009 15:42:33.108" endtime="20221009 15:42:33.108"/>
 </kw>
-<status status="PASS" starttime="20221003 10:29:54.456" endtime="20221003 10:29:54.480"/>
+<status status="PASS" starttime="20221009 15:42:33.107" endtime="20221009 15:42:33.108"/>
 </iter>
-<status status="PASS" starttime="20221003 10:29:54.431" endtime="20221003 10:29:54.480"/>
+<status status="PASS" starttime="20221009 15:42:33.089" endtime="20221009 15:42:33.108"/>
 </for>
-<status status="PASS" starttime="20221003 10:29:54.431" endtime="20221003 10:29:54.480"/>
+<status status="PASS" starttime="20221009 15:42:33.088" endtime="20221009 15:42:33.109"/>
 </kw>
 <tag>CONTA_PAR</tag>
-<status status="PASS" starttime="20221003 10:29:54.430" endtime="20221003 10:29:54.481"/>
+<status status="PASS" starttime="20221009 15:42:33.088" endtime="20221009 15:42:33.109"/>
 </test>
-<test id="s1-t5" name="Cenario de teste extra - Try + Except + Finally" line="35">
-<kw name="Exibir a lista e verificar quais são os numeros existentes">
-<msg timestamp="20221003 10:29:54.484" level="FAIL">No keyword with name 'Exibir a lista e verificar quais são os numeros existentes' found.</msg>
-<status status="FAIL" starttime="20221003 10:29:54.484" endtime="20221003 10:29:54.484"/>
-</kw>
-<tag>LISTA_CONFERE_COMPARA</tag>
-<status status="FAIL" starttime="20221003 10:29:54.482" endtime="20221003 10:29:54.485">No keyword with name 'Exibir a lista e verificar quais são os numeros existentes' found.</status>
-</test>
-<doc>Neste documento constara os exercicios propostos na aula da 2 semana da PHA</doc>
-<status status="FAIL" starttime="20221003 10:29:54.403" endtime="20221003 10:29:54.487"/>
+<doc>Neste documento constara os exercicios propostos na aula da 2 semana da Prime Hero Academy</doc>
+<status status="PASS" starttime="20221009 15:42:33.061" endtime="20221009 15:42:33.111"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="1" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="1" fail="0" skip="0">CONTA_PAR</stat>
 <stat pass="1" fail="0" skip="0">ESCOLHA_FRUTA</stat>
-<stat pass="0" fail="1" skip="0">LISTA_CONFERE_COMPARA</stat>
 <stat pass="1" fail="0" skip="0">PESSOA</stat>
 <stat pass="1" fail="0" skip="0">SECULO PASSADO</stat>
 </tag>
 <suite>
-<stat pass="4" fail="1" skip="0" id="s1" name="ExercicioSegSem">ExercicioSegSem</stat>
+<stat pass="4" fail="0" skip="0" id="s1" name="ExercicioSegSem">ExercicioSegSem</stat>
 </suite>
 </statistics>
 <errors>

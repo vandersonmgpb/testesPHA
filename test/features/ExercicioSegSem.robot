@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation        Neste documento constara os exercicios propostos na aula da 2 semana da PHA
+Documentation        Neste documento constara os exercicios propostos na aula da 2 semana da Prime Hero Academy
 
 *** Variables ***
 # Exibir nome, idade, rua, numero, cep, bairro, cidade e estado no console a partir de um dicionario
@@ -17,7 +17,7 @@ ${LISTA_CONFERE_COMPARA}
 *** Test Cases ***
 Cenario de teste 01 - Dicionário
     [Tags]    PESSOA
-    Log to console    ${PESSOA}
+    Log    ${PESSOA}
 
 Cenario de teste 02 - Argumentos e Retornos + If Simples
     [Tags]    SECULO PASSADO
@@ -36,8 +36,7 @@ Cenario de teste 04 - If Inline + For in Range
 
 #                                    Exercicio Dicionario                               #
 Exibir pessoa no Console
-    Log To Console     nome=Jose da Silva    idade=67    endereco=rua Santa Luzia    numero=118    cep=36404-000
-    ...                bairro=Belo Horizonte    cidade=Congonhas    estado=Minas Gerais
+    Log     Nome: ${PESSOA.nome}    idade: ${PESSOA.idade}    endereco: ${PESSOA.endereco}    numero: ${PESSOA.numero}    cep: ${PESSOA.cep}     bairro: ${PESSOA.bairro}    cidade: ${PESSOA.cidade}    estado: ${PESSOA.estado}
 
 
 #                               Exercicio - If simples                                  #
