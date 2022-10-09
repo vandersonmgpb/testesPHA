@@ -17,7 +17,7 @@ ${LISTA_CONFERE_COMPARA}
 *** Test Cases ***
 Cenario de teste 01 - Dicionário
     [Tags]    PESSOA
-    Log    ${PESSOA}
+    Exibir pessoa no Console
 
 Cenario de teste 02 - Argumentos e Retornos + If Simples
     [Tags]    SECULO PASSADO
@@ -40,6 +40,7 @@ Exibir pessoa no Console
 
 
 #                               Exercicio - If simples                                  #
+
 Exibir Ano de nascimento
     [Arguments]    ${IDADE}
     
@@ -55,6 +56,7 @@ Exibir Ano de nascimento
 
 
 #                              Exercicio - For Simples + Lista                           #
+
 Exibir lista escolha de fruta
     @{ESCOLHA_FRUTA}    Create List    Maca    Pera    Banana    Melao    Uva
     FOR    ${ESCOLHA_FRUTA}    IN    ${ESCOLHA_FRUTA}
@@ -65,14 +67,13 @@ Exibir lista escolha de fruta
 #                        Exercicio - If Inline + For in Range                           #
 
 Exibir numeros pares em uma lista determinada
-    FOR    ${i}    IN RANGE    0    11
-        IF  ${i%2} == 0        
+    FOR    ${CONTADOR}    IN RANGE    0    11
+        IF  ${CONTADOR%2} == 0        
         ${CONTA_PAR}    Evaluate    ${CONTA_PAR} +1
-            Log    \n\nO total de numeros: ${i} e existem ${CONTA_PAR} numeros pares
-        END
-        Log    Acabou o loop!
+            Log    O total de numeros: ${CONTADOR} e existem ${CONTA_PAR} numeros pares
+        END        
     END
-
+    Log    Acabou o loop!
 
     
 
