@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.0 on win32)" generated="20221009 17:51:35.016" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.0 on win32)" generated="20221018 19:04:10.793" rpa="false" schemaversion="3">
 <suite id="s1" name="ExercicioSegSem" source="C:\PHA\Exercicio 2 - FcoAraujo\testesPHA\test\features\ExercicioSegSem.robot">
-<test id="s1-t1" name="Cenario de teste 01 - Dicionário" line="18">
+<test id="s1-t1" name="Cenario de teste 01 - Dicionário" line="35">
 <kw name="Exibir pessoa no Console">
 <kw name="Log Many" library="BuiltIn">
 <arg>Nome: ${PESSOA.nome}</arg>
@@ -13,57 +13,57 @@
 <arg>cidade: ${PESSOA.cidade}</arg>
 <arg>estado: ${PESSOA.estado}</arg>
 <doc>Logs the given messages as separate entries using the INFO level.</doc>
-<msg timestamp="20221009 17:51:35.034" level="INFO">Nome: Jose da Silva</msg>
-<msg timestamp="20221009 17:51:35.034" level="INFO">idade: 67</msg>
-<msg timestamp="20221009 17:51:35.035" level="INFO">endereco: rua Santa Luzia</msg>
-<msg timestamp="20221009 17:51:35.035" level="INFO">numero: 118</msg>
-<msg timestamp="20221009 17:51:35.035" level="INFO">cep: 36404-000</msg>
-<msg timestamp="20221009 17:51:35.036" level="INFO">bairro: Belo Horizonte</msg>
-<msg timestamp="20221009 17:51:35.036" level="INFO">cidade: Congonhas</msg>
-<msg timestamp="20221009 17:51:35.036" level="INFO">estado: Minas Gerais</msg>
-<status status="PASS" starttime="20221009 17:51:35.033" endtime="20221009 17:51:35.036"/>
+<msg timestamp="20221018 19:04:10.843" level="INFO">Nome: Jose da Silva</msg>
+<msg timestamp="20221018 19:04:10.843" level="INFO">idade: 67</msg>
+<msg timestamp="20221018 19:04:10.843" level="INFO">endereco: rua Santa Luzia</msg>
+<msg timestamp="20221018 19:04:10.843" level="INFO">numero: 118</msg>
+<msg timestamp="20221018 19:04:10.848" level="INFO">cep: 36404-000</msg>
+<msg timestamp="20221018 19:04:10.848" level="INFO">bairro: Belo Horizonte</msg>
+<msg timestamp="20221018 19:04:10.848" level="INFO">cidade: Congonhas</msg>
+<msg timestamp="20221018 19:04:10.848" level="INFO">estado: Minas Gerais</msg>
+<status status="PASS" starttime="20221018 19:04:10.843" endtime="20221018 19:04:10.848"/>
 </kw>
-<status status="PASS" starttime="20221009 17:51:35.033" endtime="20221009 17:51:35.037"/>
+<status status="PASS" starttime="20221018 19:04:10.843" endtime="20221018 19:04:10.848"/>
 </kw>
 <tag>PESSOA</tag>
-<status status="PASS" starttime="20221009 17:51:35.032" endtime="20221009 17:51:35.037"/>
+<status status="PASS" starttime="20221018 19:04:10.841" endtime="20221018 19:04:10.848"/>
 </test>
-<test id="s1-t2" name="Cenario de teste 02 - Argumentos e Retornos + If Simples" line="22">
-<kw name="Exibir Ano de nascimento">
+<test id="s1-t2" name="Cenario de teste 02 - Argumentos e Retornos + If Simples" line="39">
+<kw name="Verifica Ano de nascimento do usuario">
 <arg>67</arg>
 <kw name="Evaluate" library="BuiltIn">
 <var>${ANO_NASCIMENTO}</var>
 <arg>${ANO_ATUAL} - ${IDADE}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221009 17:51:35.040" level="INFO">${ANO_NASCIMENTO} = 1955</msg>
-<status status="PASS" starttime="20221009 17:51:35.040" endtime="20221009 17:51:35.040"/>
+<msg timestamp="20221018 19:04:10.853" level="INFO">${ANO_NASCIMENTO} = 1955</msg>
+<status status="PASS" starttime="20221018 19:04:10.848" endtime="20221018 19:04:10.853"/>
 </kw>
 <if>
 <branch type="IF" condition="${ANO_NASCIMENTO} &lt; 2000">
 <kw name="Log" library="BuiltIn">
-<arg>Voce nasceu no seculo passado, mas nao sou tao velho assim, um pouco mais exepriente :))!!!</arg>
+<arg>Voce nasceu no seculo passado, tendo ${ANO_NASCIMENTO} mas nao sou tao velho assim, um pouco mais exepriente :))!!!</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20221009 17:51:35.040" level="INFO">Voce nasceu no seculo passado, mas nao sou tao velho assim, um pouco mais exepriente :))!!!</msg>
-<status status="PASS" starttime="20221009 17:51:35.040" endtime="20221009 17:51:35.040"/>
+<msg timestamp="20221018 19:04:10.853" level="INFO">Voce nasceu no seculo passado, tendo 1955 mas nao sou tao velho assim, um pouco mais exepriente :))!!!</msg>
+<status status="PASS" starttime="20221018 19:04:10.853" endtime="20221018 19:04:10.853"/>
 </kw>
-<status status="PASS" starttime="20221009 17:51:35.040" endtime="20221009 17:51:35.040"/>
+<status status="PASS" starttime="20221018 19:04:10.853" endtime="20221018 19:04:10.853"/>
 </branch>
 <branch type="ELSE IF" condition="${ANO_NASCIMENTO} &gt;= 2000">
 <kw name="Log" library="BuiltIn">
-<arg>Voce nasceu neste seculo a vida eh bela!!</arg>
+<arg>Voce nasceu neste seculo e tem ${ANO_NASCIMENTO} a vida eh bela aproveite-a!!</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20221009 17:51:35.041" endtime="20221009 17:51:35.041"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.853" endtime="20221018 19:04:10.853"/>
 </kw>
-<status status="NOT RUN" starttime="20221009 17:51:35.040" endtime="20221009 17:51:35.041"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.853" endtime="20221018 19:04:10.853"/>
 </branch>
-<status status="PASS" starttime="20221009 17:51:35.040" endtime="20221009 17:51:35.041"/>
+<status status="PASS" starttime="20221018 19:04:10.853" endtime="20221018 19:04:10.853"/>
 </if>
-<status status="PASS" starttime="20221009 17:51:35.039" endtime="20221009 17:51:35.041"/>
+<status status="PASS" starttime="20221018 19:04:10.848" endtime="20221018 19:04:10.853"/>
 </kw>
 <tag>SECULO PASSADO</tag>
-<status status="PASS" starttime="20221009 17:51:35.039" endtime="20221009 17:51:35.041"/>
+<status status="PASS" starttime="20221018 19:04:10.848" endtime="20221018 19:04:10.853"/>
 </test>
-<test id="s1-t3" name="Cenario de teste 03 - For Simples + Lista" line="26">
+<test id="s1-t3" name="Cenario de teste 03 - For Simples + Lista" line="43">
 <kw name="Exibir lista escolha de fruta">
 <kw name="Create List" library="BuiltIn">
 <var>@{ESCOLHA_FRUTA}</var>
@@ -73,8 +73,8 @@
 <arg>Melao</arg>
 <arg>Uva</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20221009 17:51:35.044" level="INFO">@{ESCOLHA_FRUTA} = [ Maca | Pera | Banana | Melao | Uva ]</msg>
-<status status="PASS" starttime="20221009 17:51:35.044" endtime="20221009 17:51:35.044"/>
+<msg timestamp="20221018 19:04:10.860" level="INFO">@{ESCOLHA_FRUTA} = [ Maca | Pera | Banana | Melao | Uva ]</msg>
+<status status="PASS" starttime="20221018 19:04:10.859" endtime="20221018 19:04:10.860"/>
 </kw>
 <for flavor="IN">
 <var>${ESCOLHA_FRUTA}</var>
@@ -84,19 +84,19 @@
 <kw name="Log" library="BuiltIn">
 <arg>Minha escolha e: ${ESCOLHA_FRUTA[3]}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20221009 17:51:35.044" level="INFO">Minha escolha e: Melao</msg>
-<status status="PASS" starttime="20221009 17:51:35.044" endtime="20221009 17:51:35.044"/>
+<msg timestamp="20221018 19:04:10.860" level="INFO">Minha escolha e: Melao</msg>
+<status status="PASS" starttime="20221018 19:04:10.860" endtime="20221018 19:04:10.860"/>
 </kw>
-<status status="PASS" starttime="20221009 17:51:35.044" endtime="20221009 17:51:35.044"/>
+<status status="PASS" starttime="20221018 19:04:10.860" endtime="20221018 19:04:10.860"/>
 </iter>
-<status status="PASS" starttime="20221009 17:51:35.044" endtime="20221009 17:51:35.044"/>
+<status status="PASS" starttime="20221018 19:04:10.860" endtime="20221018 19:04:10.860"/>
 </for>
-<status status="PASS" starttime="20221009 17:51:35.043" endtime="20221009 17:51:35.044"/>
+<status status="PASS" starttime="20221018 19:04:10.858" endtime="20221018 19:04:10.860"/>
 </kw>
 <tag>ESCOLHA_FRUTA</tag>
-<status status="PASS" starttime="20221009 17:51:35.043" endtime="20221009 17:51:35.045"/>
+<status status="PASS" starttime="20221018 19:04:10.857" endtime="20221018 19:04:10.862"/>
 </test>
-<test id="s1-t4" name="Cenario de teste 04 - If Inline + For in Range" line="30">
+<test id="s1-t4" name="Cenario de teste 04 - If Inline + For in Range" line="47">
 <kw name="Exibir numeros pares em uma lista determinada">
 <for flavor="IN RANGE">
 <var>${CONTADOR}</var>
@@ -110,20 +110,20 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221009 17:51:35.048" level="INFO">${CONTA_PAR} = 1</msg>
-<status status="PASS" starttime="20221009 17:51:35.048" endtime="20221009 17:51:35.048"/>
+<msg timestamp="20221018 19:04:10.862" level="INFO">${CONTA_PAR} = 1</msg>
+<status status="PASS" starttime="20221018 19:04:10.862" endtime="20221018 19:04:10.862"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>O total de numeros: ${CONTADOR} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20221009 17:51:35.048" level="INFO">O total de numeros: 0 e existem 1 numeros pares</msg>
-<status status="PASS" starttime="20221009 17:51:35.048" endtime="20221009 17:51:35.048"/>
+<msg timestamp="20221018 19:04:10.862" level="INFO">O total de numeros: 0 e existem 1 numeros pares</msg>
+<status status="PASS" starttime="20221018 19:04:10.862" endtime="20221018 19:04:10.862"/>
 </kw>
-<status status="PASS" starttime="20221009 17:51:35.048" endtime="20221009 17:51:35.048"/>
+<status status="PASS" starttime="20221018 19:04:10.862" endtime="20221018 19:04:10.862"/>
 </branch>
-<status status="PASS" starttime="20221009 17:51:35.047" endtime="20221009 17:51:35.048"/>
+<status status="PASS" starttime="20221018 19:04:10.862" endtime="20221018 19:04:10.862"/>
 </if>
-<status status="PASS" starttime="20221009 17:51:35.047" endtime="20221009 17:51:35.048"/>
+<status status="PASS" starttime="20221018 19:04:10.862" endtime="20221018 19:04:10.862"/>
 </iter>
 <iter>
 <var name="${CONTADOR}">1</var>
@@ -133,18 +133,18 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20221009 17:51:35.049" endtime="20221009 17:51:35.049"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.862" endtime="20221018 19:04:10.862"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>O total de numeros: ${CONTADOR} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20221009 17:51:35.049" endtime="20221009 17:51:35.049"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </kw>
-<status status="NOT RUN" starttime="20221009 17:51:35.049" endtime="20221009 17:51:35.049"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.862" endtime="20221018 19:04:10.867"/>
 </branch>
-<status status="PASS" starttime="20221009 17:51:35.048" endtime="20221009 17:51:35.049"/>
+<status status="PASS" starttime="20221018 19:04:10.862" endtime="20221018 19:04:10.867"/>
 </if>
-<status status="PASS" starttime="20221009 17:51:35.048" endtime="20221009 17:51:35.049"/>
+<status status="PASS" starttime="20221018 19:04:10.862" endtime="20221018 19:04:10.867"/>
 </iter>
 <iter>
 <var name="${CONTADOR}">2</var>
@@ -154,20 +154,20 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221009 17:51:35.050" level="INFO">${CONTA_PAR} = 2</msg>
-<status status="PASS" starttime="20221009 17:51:35.049" endtime="20221009 17:51:35.050"/>
+<msg timestamp="20221018 19:04:10.867" level="INFO">${CONTA_PAR} = 2</msg>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>O total de numeros: ${CONTADOR} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20221009 17:51:35.050" level="INFO">O total de numeros: 2 e existem 2 numeros pares</msg>
-<status status="PASS" starttime="20221009 17:51:35.050" endtime="20221009 17:51:35.050"/>
+<msg timestamp="20221018 19:04:10.867" level="INFO">O total de numeros: 2 e existem 2 numeros pares</msg>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </kw>
-<status status="PASS" starttime="20221009 17:51:35.049" endtime="20221009 17:51:35.050"/>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </branch>
-<status status="PASS" starttime="20221009 17:51:35.049" endtime="20221009 17:51:35.050"/>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </if>
-<status status="PASS" starttime="20221009 17:51:35.049" endtime="20221009 17:51:35.050"/>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </iter>
 <iter>
 <var name="${CONTADOR}">3</var>
@@ -177,18 +177,18 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20221009 17:51:35.052" endtime="20221009 17:51:35.052"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>O total de numeros: ${CONTADOR} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20221009 17:51:35.052" endtime="20221009 17:51:35.052"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </kw>
-<status status="NOT RUN" starttime="20221009 17:51:35.052" endtime="20221009 17:51:35.052"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </branch>
-<status status="PASS" starttime="20221009 17:51:35.050" endtime="20221009 17:51:35.052"/>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </if>
-<status status="PASS" starttime="20221009 17:51:35.050" endtime="20221009 17:51:35.052"/>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </iter>
 <iter>
 <var name="${CONTADOR}">4</var>
@@ -198,20 +198,20 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221009 17:51:35.054" level="INFO">${CONTA_PAR} = 3</msg>
-<status status="PASS" starttime="20221009 17:51:35.054" endtime="20221009 17:51:35.054"/>
+<msg timestamp="20221018 19:04:10.867" level="INFO">${CONTA_PAR} = 3</msg>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>O total de numeros: ${CONTADOR} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20221009 17:51:35.055" level="INFO">O total de numeros: 4 e existem 3 numeros pares</msg>
-<status status="PASS" starttime="20221009 17:51:35.054" endtime="20221009 17:51:35.055"/>
+<msg timestamp="20221018 19:04:10.867" level="INFO">O total de numeros: 4 e existem 3 numeros pares</msg>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </kw>
-<status status="PASS" starttime="20221009 17:51:35.054" endtime="20221009 17:51:35.055"/>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </branch>
-<status status="PASS" starttime="20221009 17:51:35.052" endtime="20221009 17:51:35.055"/>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </if>
-<status status="PASS" starttime="20221009 17:51:35.052" endtime="20221009 17:51:35.055"/>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </iter>
 <iter>
 <var name="${CONTADOR}">5</var>
@@ -221,18 +221,18 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20221009 17:51:35.055" endtime="20221009 17:51:35.055"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>O total de numeros: ${CONTADOR} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20221009 17:51:35.056" endtime="20221009 17:51:35.056"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </kw>
-<status status="NOT RUN" starttime="20221009 17:51:35.055" endtime="20221009 17:51:35.056"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </branch>
-<status status="PASS" starttime="20221009 17:51:35.055" endtime="20221009 17:51:35.056"/>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </if>
-<status status="PASS" starttime="20221009 17:51:35.055" endtime="20221009 17:51:35.056"/>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </iter>
 <iter>
 <var name="${CONTADOR}">6</var>
@@ -242,20 +242,20 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221009 17:51:35.056" level="INFO">${CONTA_PAR} = 4</msg>
-<status status="PASS" starttime="20221009 17:51:35.056" endtime="20221009 17:51:35.056"/>
+<msg timestamp="20221018 19:04:10.867" level="INFO">${CONTA_PAR} = 4</msg>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.867"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>O total de numeros: ${CONTADOR} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20221009 17:51:35.057" level="INFO">O total de numeros: 6 e existem 4 numeros pares</msg>
-<status status="PASS" starttime="20221009 17:51:35.056" endtime="20221009 17:51:35.057"/>
+<msg timestamp="20221018 19:04:10.873" level="INFO">O total de numeros: 6 e existem 4 numeros pares</msg>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.873"/>
 </kw>
-<status status="PASS" starttime="20221009 17:51:35.056" endtime="20221009 17:51:35.057"/>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.873"/>
 </branch>
-<status status="PASS" starttime="20221009 17:51:35.056" endtime="20221009 17:51:35.057"/>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.873"/>
 </if>
-<status status="PASS" starttime="20221009 17:51:35.056" endtime="20221009 17:51:35.057"/>
+<status status="PASS" starttime="20221018 19:04:10.867" endtime="20221018 19:04:10.873"/>
 </iter>
 <iter>
 <var name="${CONTADOR}">7</var>
@@ -265,18 +265,18 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20221009 17:51:35.057" endtime="20221009 17:51:35.057"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.876" endtime="20221018 19:04:10.876"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>O total de numeros: ${CONTADOR} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20221009 17:51:35.057" endtime="20221009 17:51:35.057"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </kw>
-<status status="NOT RUN" starttime="20221009 17:51:35.057" endtime="20221009 17:51:35.057"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.875" endtime="20221018 19:04:10.877"/>
 </branch>
-<status status="PASS" starttime="20221009 17:51:35.057" endtime="20221009 17:51:35.057"/>
+<status status="PASS" starttime="20221018 19:04:10.874" endtime="20221018 19:04:10.877"/>
 </if>
-<status status="PASS" starttime="20221009 17:51:35.057" endtime="20221009 17:51:35.057"/>
+<status status="PASS" starttime="20221018 19:04:10.874" endtime="20221018 19:04:10.877"/>
 </iter>
 <iter>
 <var name="${CONTADOR}">8</var>
@@ -286,20 +286,20 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221009 17:51:35.058" level="INFO">${CONTA_PAR} = 5</msg>
-<status status="PASS" starttime="20221009 17:51:35.058" endtime="20221009 17:51:35.058"/>
+<msg timestamp="20221018 19:04:10.877" level="INFO">${CONTA_PAR} = 5</msg>
+<status status="PASS" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>O total de numeros: ${CONTADOR} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20221009 17:51:35.058" level="INFO">O total de numeros: 8 e existem 5 numeros pares</msg>
-<status status="PASS" starttime="20221009 17:51:35.058" endtime="20221009 17:51:35.058"/>
+<msg timestamp="20221018 19:04:10.877" level="INFO">O total de numeros: 8 e existem 5 numeros pares</msg>
+<status status="PASS" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </kw>
-<status status="PASS" starttime="20221009 17:51:35.058" endtime="20221009 17:51:35.058"/>
+<status status="PASS" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </branch>
-<status status="PASS" starttime="20221009 17:51:35.057" endtime="20221009 17:51:35.058"/>
+<status status="PASS" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </if>
-<status status="PASS" starttime="20221009 17:51:35.057" endtime="20221009 17:51:35.058"/>
+<status status="PASS" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </iter>
 <iter>
 <var name="${CONTADOR}">9</var>
@@ -309,18 +309,18 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20221009 17:51:35.058" endtime="20221009 17:51:35.059"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>O total de numeros: ${CONTADOR} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20221009 17:51:35.059" endtime="20221009 17:51:35.059"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </kw>
-<status status="NOT RUN" starttime="20221009 17:51:35.058" endtime="20221009 17:51:35.059"/>
+<status status="NOT RUN" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </branch>
-<status status="PASS" starttime="20221009 17:51:35.058" endtime="20221009 17:51:35.059"/>
+<status status="PASS" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </if>
-<status status="PASS" starttime="20221009 17:51:35.058" endtime="20221009 17:51:35.059"/>
+<status status="PASS" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </iter>
 <iter>
 <var name="${CONTADOR}">10</var>
@@ -330,49 +330,229 @@
 <var>${CONTA_PAR}</var>
 <arg>${CONTA_PAR} +1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221009 17:51:35.059" level="INFO">${CONTA_PAR} = 6</msg>
-<status status="PASS" starttime="20221009 17:51:35.059" endtime="20221009 17:51:35.059"/>
+<msg timestamp="20221018 19:04:10.877" level="INFO">${CONTA_PAR} = 6</msg>
+<status status="PASS" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>O total de numeros: ${CONTADOR} e existem ${CONTA_PAR} numeros pares</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20221009 17:51:35.059" level="INFO">O total de numeros: 10 e existem 6 numeros pares</msg>
-<status status="PASS" starttime="20221009 17:51:35.059" endtime="20221009 17:51:35.059"/>
+<msg timestamp="20221018 19:04:10.877" level="INFO">O total de numeros: 10 e existem 6 numeros pares</msg>
+<status status="PASS" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </kw>
-<status status="PASS" starttime="20221009 17:51:35.059" endtime="20221009 17:51:35.060"/>
+<status status="PASS" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </branch>
-<status status="PASS" starttime="20221009 17:51:35.059" endtime="20221009 17:51:35.060"/>
+<status status="PASS" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </if>
-<status status="PASS" starttime="20221009 17:51:35.059" endtime="20221009 17:51:35.060"/>
+<status status="PASS" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </iter>
-<status status="PASS" starttime="20221009 17:51:35.047" endtime="20221009 17:51:35.060"/>
+<status status="PASS" starttime="20221018 19:04:10.862" endtime="20221018 19:04:10.877"/>
 </for>
 <kw name="Log" library="BuiltIn">
 <arg>Acabou o loop!</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20221009 17:51:35.060" level="INFO">Acabou o loop!</msg>
-<status status="PASS" starttime="20221009 17:51:35.060" endtime="20221009 17:51:35.060"/>
+<msg timestamp="20221018 19:04:10.877" level="INFO">Acabou o loop!</msg>
+<status status="PASS" starttime="20221018 19:04:10.877" endtime="20221018 19:04:10.877"/>
 </kw>
-<status status="PASS" starttime="20221009 17:51:35.047" endtime="20221009 17:51:35.060"/>
+<status status="PASS" starttime="20221018 19:04:10.862" endtime="20221018 19:04:10.877"/>
 </kw>
 <tag>CONTA_PAR</tag>
-<status status="PASS" starttime="20221009 17:51:35.047" endtime="20221009 17:51:35.061"/>
+<status status="PASS" starttime="20221018 19:04:10.862" endtime="20221018 19:04:10.881"/>
+</test>
+<test id="s1-t5" name="Cenario de teste 05 - teste Extra Try + Except + Finally" line="51">
+<kw name="Exibir somente os numeros numa nova lista">
+<try>
+<branch type="TRY">
+<for flavor="IN">
+<var>${element}</var>
+<value>@{NUM_STRING}</value>
+<iter>
+<var name="${element}">'A'</var>
+<if>
+<branch type="IF" condition="type(${element}) == int">
+<kw name="Append To List" library="Collections">
+<arg>${LISTA_NUMERO}</arg>
+<arg>${element}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</kw>
+<status status="NOT RUN" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</branch>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</if>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</iter>
+<iter>
+<var name="${element}">1</var>
+<if>
+<branch type="IF" condition="type(${element}) == int">
+<kw name="Append To List" library="Collections">
+<arg>${LISTA_NUMERO}</arg>
+<arg>${element}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</kw>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</branch>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</if>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</iter>
+<iter>
+<var name="${element}">'B'</var>
+<if>
+<branch type="IF" condition="type(${element}) == int">
+<kw name="Append To List" library="Collections">
+<arg>${LISTA_NUMERO}</arg>
+<arg>${element}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</kw>
+<status status="NOT RUN" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</branch>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</if>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</iter>
+<iter>
+<var name="${element}">2</var>
+<if>
+<branch type="IF" condition="type(${element}) == int">
+<kw name="Append To List" library="Collections">
+<arg>${LISTA_NUMERO}</arg>
+<arg>${element}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</kw>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</branch>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</if>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</iter>
+<iter>
+<var name="${element}">'C'</var>
+<if>
+<branch type="IF" condition="type(${element}) == int">
+<kw name="Append To List" library="Collections">
+<arg>${LISTA_NUMERO}</arg>
+<arg>${element}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</kw>
+<status status="NOT RUN" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</branch>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</if>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</iter>
+<iter>
+<var name="${element}">3</var>
+<if>
+<branch type="IF" condition="type(${element}) == int">
+<kw name="Append To List" library="Collections">
+<arg>${LISTA_NUMERO}</arg>
+<arg>${element}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</kw>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</branch>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</if>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</iter>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</for>
+<kw name="Log To Console" library="BuiltIn">
+<arg>----LISTA DE NUMEROS ----</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</kw>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</branch>
+<branch type="EXCEPT">
+<for flavor="IN">
+<var>${element}</var>
+<value>@{NUM_STRING}</value>
+<iter>
+<var name="${element}"/>
+<if>
+<branch type="IF" condition="type(${element}) == str">
+<kw name="Append To List" library="Collections">
+<arg>${LISTA_STRING}</arg>
+<arg>${element}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</kw>
+<status status="NOT RUN" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</branch>
+<status status="NOT RUN" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.883"/>
+</if>
+<status status="NOT RUN" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.888"/>
+</iter>
+<status status="NOT RUN" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.888"/>
+</for>
+<kw name="Log To Console" library="BuiltIn">
+<arg>----LISTA LETRAS ----</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221018 19:04:10.888" endtime="20221018 19:04:10.888"/>
+</kw>
+<status status="NOT RUN" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.888"/>
+</branch>
+<branch type="FINALLY">
+<for flavor="IN">
+<var>${element}</var>
+<value>@{LISTA_STRING}</value>
+<iter>
+<var name="${element}"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221018 19:04:10.888" endtime="20221018 19:04:10.888"/>
+</kw>
+<status status="NOT RUN" starttime="20221018 19:04:10.888" endtime="20221018 19:04:10.888"/>
+</iter>
+<status status="NOT RUN" starttime="20221018 19:04:10.888" endtime="20221018 19:04:10.888"/>
+</for>
+<for flavor="IN">
+<var>${element}</var>
+<value>${LISTA_NUMERO}</value>
+<iter>
+<var name="${element}">['1', '2', '3']</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221018 19:04:10.888" endtime="20221018 19:04:10.888"/>
+</kw>
+<status status="PASS" starttime="20221018 19:04:10.888" endtime="20221018 19:04:10.888"/>
+</iter>
+<status status="PASS" starttime="20221018 19:04:10.888" endtime="20221018 19:04:10.888"/>
+</for>
+<status status="PASS" starttime="20221018 19:04:10.888" endtime="20221018 19:04:10.888"/>
+</branch>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.890"/>
+</try>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.890"/>
+</kw>
+<tag>NUM_STRING</tag>
+<status status="PASS" starttime="20221018 19:04:10.883" endtime="20221018 19:04:10.890"/>
 </test>
 <doc>Neste documento constara os exercicios propostos na aula da 2 semana da Prime Hero Academy</doc>
-<status status="PASS" starttime="20221009 17:51:35.017" endtime="20221009 17:51:35.062"/>
+<status status="PASS" starttime="20221018 19:04:10.793" endtime="20221018 19:04:10.893"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="1" fail="0" skip="0">CONTA_PAR</stat>
 <stat pass="1" fail="0" skip="0">ESCOLHA_FRUTA</stat>
+<stat pass="1" fail="0" skip="0">NUM_STRING</stat>
 <stat pass="1" fail="0" skip="0">PESSOA</stat>
 <stat pass="1" fail="0" skip="0">SECULO PASSADO</stat>
 </tag>
 <suite>
-<stat pass="4" fail="0" skip="0" id="s1" name="ExercicioSegSem">ExercicioSegSem</stat>
+<stat pass="5" fail="0" skip="0" id="s1" name="ExercicioSegSem">ExercicioSegSem</stat>
 </suite>
 </statistics>
 <errors>
